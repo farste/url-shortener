@@ -3,11 +3,11 @@ const express = require("express");
 const server = express();
 const cors = require("cors");
 const shorten = require("./routes/shorten");
-const access = require("./routes/access");
+//const access = require("./routes/access");
 server.use(cors());
 server.use(express.json());
 server.use("/shorten", shorten);
-server.use("/access", access);
+//server.use("/access", access);
 server.get('/', (req, res) => {
     res.send('I live');
 });

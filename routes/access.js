@@ -1,4 +1,4 @@
-const router = require('express').Router();
+/* const router = require('express').Router();
 const db = require('../data/dbconfig.js');
 
 router.get('/:target', (req, res) => {
@@ -15,4 +15,4 @@ router.get('/:target', (req, res) => {
     .catch(err => res.status(404).json({ error: 'no url found' }));
 })
 
-module.exports = router;
+module.exports = router; */
