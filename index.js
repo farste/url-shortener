@@ -8,7 +8,7 @@ var base62 = require("base62/lib/ascii");
 
 server.get('/', (req, res) => {
     res.send('I live');
-})
+});
 
 server.post('/base62', (req, res) => {
     const number = req.body.number;
@@ -20,7 +20,7 @@ server.post('/decrypt', (req, res) => {
     const target = req.body.target;
     result = base62.decode(target);
     res.send(`${result}`);
-})
+});
 
 const port = process.env.PORT || 3300;
 server.listen(port, function() {
