@@ -16,8 +16,10 @@ router.post('/', (req, res) => {
     .catch(err => res.status(500).json(err));
     }) 
 
-router.get('/urls', (req, res) => {
+ router.get('/urls', (req, res) => {
     db('urls').select().then(urls => {
-      res.status(200).json(urls);})
-    });
+      res.status(200).json(urls)
+      .catch(err => res.status(500).json(err));
+     })
+    }); 
 module.exports = router;
