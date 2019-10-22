@@ -8,7 +8,7 @@ router.post('/', (req, res) => {
     const string = req.body.string;
     hash = hashCode(string);
     result = base62.encode(hash);
-     db.insert({ id : result, url : string })
+     db.insert({ b62 : result, url : string })
     .into("urls")
     .then(urls => {
       res.status(201).json(urls);

@@ -1,9 +1,10 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable('urls', function(tbl) {
+        tbl.increments();
         //base-62 id
         tbl
-            .string('id', 6)
+            .string('b62', 6)
             .notNullable();
         
         //URL
