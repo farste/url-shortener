@@ -8,5 +8,7 @@ yarn-error.log*
 # node
 /node_modules
 
+#db
+.sqlite3*
 # dotenv environment variables
 .env
