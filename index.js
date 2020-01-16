@@ -1,9 +1,9 @@
-require('dotenv').config();
+const { port } = require("./data/dbconfig");
 const express = require("express");
 const server = express();
 const cors = require("cors");
-const shorten = require("./routes/shorten");
-const access = require("./routes/access");
+const shorten = require("./shorten/shorten");
+const access = require("./access/access");
 server.use(cors());
 server.use(express.json());
 server.use("/shorten", shorten);
@@ -24,7 +24,6 @@ server.post('/decrypt', (req, res) => {
     res.send(`${result}`);
 }); */
 
-const port = process.env.PORT || 3300;
 server.listen(port, function() {
     console.log(`\n Web API Listening on localhost:${port}\n`)
 });
